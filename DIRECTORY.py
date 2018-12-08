@@ -1,4 +1,5 @@
 def data():
+    '''Information about people'''
     catalog = [['Ануфриенко','Кирилл', 'Григорьевич', '1 апреля','+79033583114'],
         ['Балабанов','Михаил','Александрович', '16 августа','+79095121200'],
          ['Батенев','Павел','Александрович','3 января','+79612271770'],
@@ -40,6 +41,7 @@ def data():
     return catalog
 
 def int(catalog):
+    '''Сorrect last name entry'''
     count = 0
     while count != 1:
         name = input('Введите фамилию: ')
@@ -55,6 +57,7 @@ def int(catalog):
             print('Упс! Такой в каталоге нет.')
 
 def out(catalog,name):
+    '''Output of necessary information'''
     for item in catalog:
         if name == item[0]:
             print()
@@ -65,6 +68,7 @@ def out(catalog,name):
             print('Номер телефона: ', item[4])
 
 def main():
+    '''Main function'''
     print('ГРУППА 18704')
     out(data(),int(data()))
 if __name__ == '__main__':
